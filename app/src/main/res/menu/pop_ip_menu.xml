@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/header1"
+        android:title="Удалить сообщение" />
+    <item
+        android:id="@+id/header2"
+        android:title="Копировать" />
+    <item
+        android:id="@+id/header3"
+        android:title="Жопа" />
+
+</menu>

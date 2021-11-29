@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:id="@+id/toolBar_group">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/toolbar_group_image"
+            android:layout_width="@dimen/toolbar_image_weight"
+            android:layout_height="@dimen/toolbar_image_height"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/toolbar_group_fullname"
+            style="@style/normalText"
+            tools:text="Алексей"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/toolbar_group_image"
+            app:layout_constraintTop_toTopOf="@id/toolbar_group_image" />
+        <TextView
+            android:id="@+id/toolbar_group_users"
+            style="@style/normalText"
+            tools:text="Участников: "
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/toolbar_group_image"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_group_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</com.google.android.material.appbar.MaterialToolbar>

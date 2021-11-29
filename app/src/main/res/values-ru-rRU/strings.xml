@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Tristagram</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chats_text">Чаты</string>
+    <string name="status_v_seti">в сети</string>
+    <string name="settings_default_username">Алексей</string>
+    <string name="settings_text_account">Аккаунт</string>
+    <string name="settings_default_phone_number">+79111111111</string>
+    <string name="settings_label_phone_number">Нажми, чтобы изменить номер телефона</string>
+    <string name="settings_default_login">Алексей</string>
+    <string name="settings_label_login">Твоё имя в базе данных. Нажми для изменения.</string>
+    <string name="settings_default_bio">Тут можешь что-нибудь написать</string>
+    <string name="settings_label_bio">Напиши что-нибудь умное</string>
+    <string name="settings_menu_change_name">Сменить имя в чате</string>
+    <string name="settings_menu_exit">Выйти из аккаунта</string>
+    <string name="cd_register_image">register_image</string>
+    <string name="register_text_enter_code">Введи код</string>
+    <string name="register_text_we_sent">Tristagram отправил SMS, с кодом проверки, на Ваш телефон</string>
+    <string name="register_hint_default_code">-     -     -     -     -     -</string>
+    <string name="register_titleyour_phone">Твой номер телефона</string>
+    <string name="register_toast_enter_phone">Введи номер телефона</string>
+    <string name="register_phone_hint">+7-(___)-(___)-(____)</string>
+    <string name="Settings_input_name">Введите имя</string>
+    <string name="toast_data_update">Данные обновлены</string>
+    <string name="toast_name_empty">Пустое поле</string>
+    <string name="settings_hint_input_username">username</string>
+    <string name="toast_takoy_uze_est">Такой юзер уже есть</string>
+    <string name="sittigs_input_bio">bio</string>
+    <string name="toast_password_wrong">\"Телефон неправильный\"</string>
+    <string name="base_api_url">https://www.googleapis.com/androidcheck/v1/attestations/</string>
+    <string name="voice_message_text">Голосовое сообщение</string>
+    <string name="clear_chat">Очистить чат</string>
+    <string name="delete_chat">Удалить чат</string>
+    <string name="delete_key">Удалить ключ</string>
+    <string name="see_key">Показать ключ</string>
+    <string name="enter_key">Ввести ключ</string>
+    <string name="enter_key_chat_text_after_del">Ключ был удалён собеседником </string>
+    <string name="create_group">Создать группу</string>
+    <string name="leave_chat_creator">Покинуть чат</string>
+    <string name="key_chat_text">Создайте ключ</string>
+    <string name="enter_key_chat_text">Ключ создан, но у Вас его ещё нет </string>
+    <string name="create_key">Создать ключ</string>
+    <string name="change_key_chat_text">Изменение ключа</string>
+    <string name="delete_all_group_messages">Очистить группу</string>
+    <string name="delete_group">Удалить группу</string>
+    <string name="msg_token_fmt">fg</string>
+    <string name="message_editText">Сообщение</string>
+    <string name="todo">TODO</string>
+    <string name="readed_text">прочитано</string>
+    <string name="viewed">просмотрено</string>
+    <string name="_0">0</string>
+    <string name="writing">печатает…</string>
+
+    <string name="cancel">Отмена</string>
+    <string name="decline">Выйти</string>
+    <string name="accept">ОК</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_contacts">Контакты</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_group">Создать группу</string>
+    <plurals name="count_members">
+        <item quantity="one">%d участник</item>
+        <item quantity="other">%d участников</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+
+    </plurals>
+    <string name="title_activity_full_photo">FullPhotoActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
+
+

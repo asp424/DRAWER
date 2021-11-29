@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1039867480484",
+    "firebase_url": "https://tristagram-323116-default-rtdb.firebaseio.com",
+    "project_id": "tristagram-323116",
+    "storage_bucket": "tristagram-323116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039867480484:android:0a1a267e5076185905d931",
+        "android_client_info": {
+          "package_name": "com.asp424.drawer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCUyETpWvH7FcmHwPTx6-0aTfxHowQVKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

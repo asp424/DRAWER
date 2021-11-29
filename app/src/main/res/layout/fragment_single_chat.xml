@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ass"
+    tools:context=".ui.screens.single_chat.SingleChatFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/single_chat_constr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:context=".ui.screens.single_chat.SingleChatFragment">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/char_swipe_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/chat_input_message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chat_recycle_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/fon">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_writing"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:visibility="visible"
+                app:chipBackgroundColor="#03A9F4"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/chat_input_message"
+                app:layout_constraintStart_toStartOf="parent"
+                app:singleSelection="true"
+                tools:text="печатает...">
+
+            </com.google.android.material.chip.ChipGroup>
+            <EditText
+                android:id="@+id/chat_input_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/message_editText"
+                android:padding="@dimen/appPadding"
+                android:textColor="@color/black"
+                android:textColorHint="#68858E85"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/chat_btn_send_message_eng"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/char_swipe_refresh" />
+
+            <ImageView
+                android:id="@+id/chat_btn_send_message"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/appPadding"
+                android:src="@drawable/ic_send"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chat_input_message" />
+
+            <ImageView
+                android:id="@+id/chat_btn_send_message_eng"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/appPadding"
+                android:src="@drawable/ic_baseline_translate_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/chat_btn_send_message"
+                app:layout_constraintTop_toTopOf="@+id/chat_input_message" />
+
+            <ImageView
+                android:id="@+id/chat_btn_attach"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/appPadding"
+                android:src="@drawable/ic_attach"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/chat_btn_voice"
+                app:layout_constraintTop_toTopOf="@+id/chat_input_message" />
+
+            <ImageView
+                android:id="@+id/chat_btn_voice"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/appPadding"
+                android:src="@drawable/ic_voice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chat_input_message" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_contacts_btn_to_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="150dp"
+                android:backgroundTint="@color/gray"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_baseline_arrow_downward_24"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/chat_input_message"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_contacts_btn_to_bottom_null"
+                android:layout_width="0.1dp"
+                android:layout_height="0.1dp"
+                android:backgroundTint="@color/gray"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_baseline_arrow_downward_24"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/add_contacts_btn_to_bottom"
+                app:layout_constraintEnd_toEndOf="@id/add_contacts_btn_to_bottom"
+                app:layout_constraintTop_toTopOf="@id/add_contacts_btn_to_bottom"
+                app:layout_constraintBottom_toBottomOf="@id/add_contacts_btn_to_bottom"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <include layout="@layout/chouse_upload" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

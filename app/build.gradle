@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.asp424.drawer"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+
+    }
+
+}
+dependencies {
+    // binding
+
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.4.6'
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.6'
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0-alpha03"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha03"
+    // cropper
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    //linkPreview
+    implementation 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    // firebase
+    implementation 'com.google.firebase:firebase-messaging-ktx:22.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:7.2.0'
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx:20.1.1'
+    implementation 'com.google.firebase:firebase-analytics-ktx:19.0.0'
+    implementation platform('com.google.firebase:firebase-bom:27.0.0')
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.1'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-database:20.0.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    // fragments
+    implementation "androidx.fragment:fragment-ktx:1.3.6"
+    // circlePhoto
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21"
+    // picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // fullPhoto
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+    /*implementation 'com.makeramen:roundedimageview:2.3.0'*/
+
+    // navigation
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+    implementation "androidx.navigation:navigation-compose:2.4.0-alpha05"
+    // materialDesign
+    implementation 'com.google.android.material:material:1.4.0'
+    // system
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.11.0') { transitive = true }
+    /*implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'*/
+    /*debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'*/
+}

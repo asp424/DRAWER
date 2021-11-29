@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.regidter.EnterCodeFragment">
+
+    <ImageView
+        android:id="@+id/register_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical__large_margin"
+        android:src="@drawable/register_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/cd_register_image"/>
+    <TextView
+        android:id="@+id/register_text_enter_code"
+        android:textStyle="bold"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/register_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_text_enter_code"
+        android:layout_margin="@dimen/vertical_margin"/>
+    <TextView
+        android:id="@+id/register_text_we_sent"
+
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/smallText"
+        android:text="@string/register_text_we_sent"
+        app:layout_constraintTop_toBottomOf="@id/register_text_enter_code"
+        android:layout_margin="@dimen/vertical_margin"/>
+
+
+    <EditText
+        android:hint="@string/register_hint_default_code"
+        android:layout_width="wrap_content"
+        android:id="@+id/register_input_code"
+        android:textSize="24sp"
+        style="@style/editRegisterText"
+        android:autofillHints=""
+        android:cursorVisible="true"
+        android:gravity="center"
+        android:maxLength="6"
+        android:selectAllOnFocus="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_text_we_sent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_enter_code"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_input_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="settings_btn_style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/ripple_effect</item>
+    </style>
+
+    <style name="actionMenu" parent="Theme.AppCompat.Light">
+        <item name="background">@color/white</item>
+        <item name="actionMenuTextColor">@color/black</item>
+
+    </style>
+
+    <style name="normalText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/standard_horizontal_margin</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="verySmallText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/standard_horizontal_margin</item>
+        <item name="android:textSize">@dimen/very_small_text</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="smallText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:textSize">@dimen/very_small_text</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="message">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">0dp</item>
+
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">#85000000</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/standard_horizontal_margin</item>
+
+    </style>
+
+    <style name="main_toolbar">
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/gray</item>
+
+    </style>
+
+    <style name="editRegisterText">
+        <item name="android:inputType">phone</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/standard_horizontal_margin</item>
+        <item name="android:padding">@dimen/appPadding</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:maxLines">1</item>
+
+
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- other theme lines. -->
+
+        // enable window content transition
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+</resources>

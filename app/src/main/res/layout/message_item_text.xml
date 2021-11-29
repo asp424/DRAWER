@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standard_horizontal_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/block_received_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_single_chat_received_photo"
+            android:layout_width="@dimen/settings_btn_change_photo_widght"
+            android:layout_height="@dimen/settings_btn_change_photo_height"
+            android:layout_marginBottom="@dimen/vertical_small_margin"
+            android:adjustViewBounds="false"
+            android:src="@drawable/default_photo"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/chat_received_message_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chat_received_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/bg_recieving_message_text"
+            android:gravity="left"
+            android:padding="9dp"
+            android:textColor="#094C0B"
+            android:textColorLink="#0A6EBD"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_single_chat_received_photo"
+            tools:text="Привет, я индюк"
+            tools:ignore="RtlHardcoded" />
+
+        <io.github.ponnamkarthik.richlinkpreview.RichLinkView
+            android:id="@+id/chat_received_message_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="left"
+            android:clickable="true"
+            android:textColor="#094C0B"
+            android:textColorLink="#0A6EBD"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_single_chat_received_photo"
+            tools:text="Привет, я индюк"
+            android:focusable="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/block_user_message"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/vertical_small_margin"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <io.github.ponnamkarthik.richlinkpreview.RichLinkView
+            android:id="@+id/chat_user_message_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textColorLink="#0A6EBD"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Привет, я индюк" />
+
+        <TextView
+            android:id="@+id/chat_user_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/bg_user_message_text"
+            android:gravity="left"
+            android:padding="9dp"
+            android:textColor="@color/black"
+            android:textColorLink="#0A6EBD"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Привет, я индюк" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/chat_user_message_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/readed_time"
+        android:textSize="@dimen/very_small_text"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/block_user_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="21:45" />
+
+    <TextView
+        android:id="@+id/chat_user_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_horizontal_margin"
+        android:gravity="start"
+        android:text="@string/readed_text"
+        android:textColor="@color/readed_time"
+        android:textColorLink="#0A6EBD"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chat_user_message_time" />
+    <TextView
+
+        android:id="@+id/chat_received_message_deleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_horizontal_margin"
+        android:gravity="start"
+        android:text="@string/readed_text"
+        android:textColor="@color/readed_time"
+        android:textColorLink="#0A6EBD"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toEndOf="@id/chat_received_message_time" />
+    <TextView
+        android:id="@+id/chat_received_message_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/readed_time"
+        android:textSize="@dimen/very_small_text"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/block_received_message"
+        tools:text="21:45" />
+</androidx.constraintlayout.widget.ConstraintLayout>

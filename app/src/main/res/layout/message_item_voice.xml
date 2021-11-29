@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standard_horizontal_margin">
+
+    <TextView
+        android:id="@+id/chat_recieved_voice_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/very_small_text"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/block_recieved_voice"
+        tools:text="21:45" />
+
+    <TextView
+        android:id="@+id/chat_user_voice_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/readed_time"
+        android:textSize="@dimen/very_small_text"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/block_user_voice"
+
+        tools:text="21:45" />
+
+    <TextView
+        android:id="@+id/chat_user_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/standard_horizontal_margin"
+        android:gravity="end"
+        android:text="@string/viewed"
+        android:textColor="@color/readed_time"
+        android:textSize="@dimen/very_small_text"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chat_user_voice_message_time"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/block_recieved_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/chat_common_heith"
+        android:background="@drawable/bg_recieving_message_text"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/chat_received_text_message_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="8dp"
+            android:text="@string/voice_message_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chat_received_btn_play"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_received_btn_play"
+            android:layout_width="@dimen/chat_btn_widht"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_play_recieved"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_received_btn_stop"
+            android:layout_width="@dimen/chat_btn_widht"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_baseline_pause_circle_filled_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/block_user_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/chat_common_heith"
+        android:background="@drawable/bg_user_message_text"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/chat_user_voice_text_voice_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/voice_message_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/chat_user_btn_play"
+            android:layout_width="@dimen/chat_btn_widht"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_play_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chat_user_voice_text_voice_message"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_user_btn_stop"
+            android:layout_width="@dimen/chat_btn_widht"
+            android:layout_height="@dimen/chat_btn_height"
+            android:src="@drawable/ic_baseline_pause_circle_filled_24_user"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chat_user_voice_text_voice_message"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

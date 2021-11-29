@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/gray"
+    android:id="@+id/appBar_single">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/toolbar_chat_image"
+            android:layout_width="@dimen/toolbar_image_weight"
+            android:layout_height="@dimen/toolbar_image_height"
+            android:src="@drawable/x"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbar_chat_fullname"
+            style="@style/normalText"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
+            app:layout_constraintTop_toTopOf="@id/toolbar_chat_image"
+            tools:text="Алексей" />
+
+        <TextView
+            android:id="@+id/toolbar_chat_status"
+            style="@style/smallText"
+            android:layout_marginStart="@dimen/standard_horizontal_margin"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_chat_fullname"
+            tools:text="в сети" />
+
+        <ImageView
+            android:id="@+id/icon_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_baseline_connect_without_contact_24"
+            android:visibility="gone"
+           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar_chat_fullname"
+            android:contentDescription="@string/todo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.appbar.MaterialToolbar>
